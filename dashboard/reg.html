@@ -62,7 +62,7 @@
 		                    	</div>
 								<div class="wizard-navigation">
 									<ul>
-			                            <li><a href="#details" data-toggle="tab">Income Tax Regulator</a></li>
+			                            <li><a href="#details" data-toggle="tab">Income Tax Regulator Officer</a></li>
 			                            <!-- <li><a href="#captain" data-toggle="tab">Room Type</a></li> -->
 			                            <li><a href="#description" data-toggle="tab">Role Based Access Control (RBAC)</a></li>
 			                        </ul>
@@ -82,19 +82,38 @@
 		                            </div>
 		                            <div class="tab-pane" id="description">
 		                                <div class="row">
-		                                    <h4 class="info-text"> Change Configurations Here</h4>
-		                                    <!-- <div class="col-sm-6 col-sm-offset-1">
-	                                    		<div class="form-group">
-		                                            <label>Private Key</label>
-													<input id="privateKey" type="text" class="form-control">
-		                                        </div>
-		                                    </div> -->
-		                                    <!-- <div class="col-sm-4">
-		                                    	<div class="form-group">
-		                                            <label class="control-label">Example</label>
-		                                            <p class="description">"The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it."</p>
-		                                        </div>
-		                                    </div> -->
+		                                    <h4 class="info-text">Defined Roles</h4>
+		                                    <div class="col-sm-6 col-sm-offset-1">
+												<form name="myForm">
+												<div class="radio">
+													<label>
+														<input type="radio" id="CEO" name="optionsRadios" value="CEO">
+														CEO
+													</label>
+												</div>
+												<div class="radio">
+													<label>
+														<input type="radio" id="HR" name="optionsRadios" value="HR">
+														Human Resource
+													</label>
+												</div>
+												<div class="radio">
+													<label>
+														<input type="radio" id="EMP" name="optionsRadios" value="EMP">
+														Employee
+													</label>
+												</div>
+											</div>
+											<input class="btn btn-success" type="button" onclick="setRole()" value="Set Role" />
+											</form>
+											<div class="row">
+												<div class="clearfix"></div>
+											<div>
+												<div id="cardsHereToo"> 
+													
+												</div>
+											</div>
+											</div>
 										</div>
 									</div>
 									
