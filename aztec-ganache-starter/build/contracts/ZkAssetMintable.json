@@ -1254,10 +1254,288 @@
       "links": {},
       "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
       "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564789731676": {
+      "events": {},
+      "links": {},
+      "address": "0xB66ef71d1D7Ba1470e01574EceD07e37d899cEd3",
+      "transactionHash": "0x41c539e65f1c960b0280128c3451aecaac1ac7ebdc2be7f36b57951e7ee69ee4"
+    },
+    "1564792453503": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564792639946": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564792742734": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564792987584": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564793095418": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564794673040": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564794793781": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564795207095": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564795499186": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564795724738": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564795803497": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564795960383": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564796070120": {
+      "events": {},
+      "links": {},
+      "address": "0x2E63304e1F9f6AD963540A05D3f385426957A2C7",
+      "transactionHash": "0xfcfc9ae33bb3a23ed3cceb0fde618e5c61302609ab53815344ddc80d687d4d38"
+    },
+    "1564796252203": {
+      "events": {
+        "0x6bc2dccbfc40ed5201f2896c7bc80fa4529202979a6c4195e7c95548b7bdedcb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "noteData",
+              "type": "bytes"
+            }
+          ],
+          "name": "UpdateTotalMinted",
+          "type": "event",
+          "signature": "0x6bc2dccbfc40ed5201f2896c7bc80fa4529202979a6c4195e7c95548b7bdedcb"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        },
+        "0xca576e79bcb5c4a0045d9d596a80c733c3997559f688f69e5c03bd737d885b86": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "aceAddress",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "linkedTokenAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "scalingFactor",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "_canAdjustSupply",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "_canConvert",
+              "type": "bool"
+            }
+          ],
+          "name": "CreateZkAsset",
+          "type": "event",
+          "signature": "0xca576e79bcb5c4a0045d9d596a80c733c3997559f688f69e5c03bd737d885b86"
+        },
+        "0x0b328bb83ddd8094b92e850e4a6a7e25d474ef81760d423ca6c5bac4f75ac5f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "noteRegistryId",
+              "type": "uint256"
+            }
+          ],
+          "name": "CreateNoteRegistry",
+          "type": "event",
+          "signature": "0x0b328bb83ddd8094b92e850e4a6a7e25d474ef81760d423ca6c5bac4f75ac5f2"
+        },
+        "0x5ffb3072e4515cf3bfae8b16be9dff6313cf7c313a0c26faafe6971d8c7585f1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "metadata",
+              "type": "bytes"
+            }
+          ],
+          "name": "CreateNote",
+          "type": "event",
+          "signature": "0x5ffb3072e4515cf3bfae8b16be9dff6313cf7c313a0c26faafe6971d8c7585f1"
+        },
+        "0xebd4bb7b61198df63305dd538f077db9df9b14339d8a6221e301487770d79227": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "metadata",
+              "type": "bytes"
+            }
+          ],
+          "name": "DestroyNote",
+          "type": "event",
+          "signature": "0xebd4bb7b61198df63305dd538f077db9df9b14339d8a6221e301487770d79227"
+        },
+        "0xfed3b27b73d78d9d1f344bbbf25f7af35e0ac4d6cf8193604ce18082168e461a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "ConvertTokens",
+          "type": "event",
+          "signature": "0xfed3b27b73d78d9d1f344bbbf25f7af35e0ac4d6cf8193604ce18082168e461a"
+        },
+        "0x60213c45c34d8b94e495fd5871fdea7a7511f659e884ea25a0c8843b7f98bfad": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "RedeemTokens",
+          "type": "event",
+          "signature": "0x60213c45c34d8b94e495fd5871fdea7a7511f659e884ea25a0c8843b7f98bfad"
+        },
+        "0x5c5b88831bccbd4efdc04b97a0bcb2a743b216c3cc74b4520ca833778ec87dfb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "metadata",
+              "type": "bytes"
+            }
+          ],
+          "name": "UpdateNoteMetadata",
+          "type": "event",
+          "signature": "0x5c5b88831bccbd4efdc04b97a0bcb2a743b216c3cc74b4520ca833778ec87dfb"
+        }
+      },
+      "links": {},
+      "address": "0xD6dc7fFb2FC9740267B27ca8fFe120c405f69F46",
+      "transactionHash": "0x9ed78a6079c5650915e40dd58a8f563567f726fbdf9c535ba08f48d0f2a1de29"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-02T23:15:09.529Z",
+  "updatedAt": "2019-08-03T01:42:05.254Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "A contract defining the standard interface and behaviours of a mintable confidential asset. The ownership values and transfer values are encrypted. Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",

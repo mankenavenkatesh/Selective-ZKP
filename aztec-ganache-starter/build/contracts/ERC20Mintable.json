@@ -833,7 +833,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-02T23:14:58.893Z",
+  "updatedAt": "2019-08-03T01:41:57.196Z",
   "devdoc": {
     "details": "ERC20 minting logic Sourced from OpenZeppelin and thoroughly butchered to remove security guards. Anybody can mint - STRICTLY FOR TEST PURPOSES",
     "methods": {

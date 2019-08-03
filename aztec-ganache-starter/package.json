@@ -10,6 +10,7 @@
     "@aztec/secp256k1": "1.0.1",
     "aztec.js": "0.11.0",
     "openzeppelin-solidity": "^2.2.0",
+    "truffle-contract": "^4.0.27",
     "web3": "^1.0.0-beta.51"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.2",
     "dotenv": "^7.0.0",
+    "express": "^4.17.1",
     "ganache-cli": "^6.4.3",
     "ganache-core": "^2.5.4-beta.2",
     "solhint": "^2.0.0",
@@ -33,6 +35,6 @@
     "migrate": "truffle compile --all && truffle migrate --reset",
     "ganache": "babel-node scripts/run ganache",
     "demo": "truffle demo.js",
-    "start": "npm run ganache"
+    "start": "npm run ganache -d "
   }
 }
