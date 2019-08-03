@@ -29,8 +29,8 @@ var cors = require('cors');
 var request = require('request');
 const util = require('../lib/util');
 
-const ALICE_VERIFYING_KEY = "031b0f3a4ef7e7f9f4f9f706aa036bb6c0f63716a5e1688cc4c6d7c834ba55d596";
-const POLICY_ENCRYPTING_KEY = "02701a3e23a45dc6427f422a942cb7a09200b22860cc46249f868ca4df65040bfe";
+const ALICE_VERIFYING_KEY = "025b24a74df391544eafd4a5fab0474dd4e77eb378cb3a8541e106e07114dfd17b";
+const POLICY_ENCRYPTING_KEY = "022826b0ed39ebfcbc4759624f2959979dfc3c7affd4d2ed89d3f1535c844030b0";
 
 var admin = require("firebase-admin");
 

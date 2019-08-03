@@ -6,6 +6,7 @@ const policyName = "admin";
 let alicePortIndex = 3000;
 let bobPortIndex = 4000;
 let enricoPortIndex = 5000;
+const util = require("../lib/util");
 
 // Alice is an admin who creates the policies
 const startAlice = (alicePort) => {
@@ -39,6 +40,7 @@ const startEnrico = (enricoPort, policyEncryptingKey) => {
         });
         handle.stdout.on('data', (data) => {
             console.log(`enrico Node ${enricoPort}: ${data}`);
+            // console.log(data.match(/[0-f]*/g));
         })
     });
 };
@@ -66,6 +68,7 @@ const createPolicy = (aliceUrl, policyName) => {
 
 const setPolicy = (aliceUrl, policyName) => {
     // TODO - setup the policy by granting access to relavent parties
+
 }
 
 const runner = async (noOfBob) => {
