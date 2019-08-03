@@ -25,7 +25,7 @@ var firebaseConfig = {
 function viewSecretAmount(id){
     if(user == "CEO"){
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        var theUrl = "https://172.16.17.97:5500/retrieve";
+        var theUrl = "http://172.16.17.97:5500/retrieve";
         xmlhttp.open("POST", theUrl);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.onload = function (){
@@ -34,16 +34,22 @@ function viewSecretAmount(id){
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState == XMLHttpRequest.DONE) {
                             document.getElementById(id).innerHTML = xhr.responseText;
+                        }else{
+                            document.getElementById(id).innerHTML = "Not Authorized";
                         }
+                        console.log('Not Auth')
                     }
-                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.open('GET', `http://172.16.17.97:3001/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
+            }else{
+                document.getElementById(id).innerHTML = "Not Authorized";
+                console.log('Not Auth');
             }
         }
-        xmlhttp.send(JSON.stringify({ "bobIndex": "1", "policyName":"ceo", "encViewKey": encMsg}));
+        xmlhttp.send(JSON.stringify({ "bobIndex": "1", "policyName":"admin", "encViewKey": encMsg}));
     }else if(user == "HR"){
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        var theUrl = "https://172.16.17.97:5500/retrieve";
+        var theUrl = "http://172.16.17.97:5500/retrieve";
         xmlhttp.open("POST", theUrl);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.onload = function (){
@@ -54,11 +60,11 @@ function viewSecretAmount(id){
                             document.getElementById(id).innerHTML = xhr.responseText;
                         }
                     }
-                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.open('GET', `http://172.16.17.97:3001/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
             }
         }
-        xmlhttp.send(JSON.stringify({ "bobIndex": "2", "policyName":"hr", "encViewKey": encMsg}));
+        xmlhttp.send(JSON.stringify({ "bobIndex": "2", "policyName":"admin", "encViewKey": encMsg}));
     }else if(user == "EMP"){
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
         var theUrl = "http://172.16.17.97:5500/retrieve";
@@ -72,11 +78,11 @@ function viewSecretAmount(id){
                             document.getElementById(id).innerHTML = xhr.responseText;
                         }
                     }
-                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.open('GET', `http://172.16.17.97:3001/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
             }
         }
-        xmlhttp.send(JSON.stringify({ "bobIndex": "3", "policyName":"emp", "encViewKey": encMsg}));
+        xmlhttp.send(JSON.stringify({ "bobIndex": "3", "policyName":"admin", "encViewKey": encMsg}));
     }else{
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
         var theUrl = "http://172.16.17.97:5500/retrieve";
@@ -101,7 +107,7 @@ function viewSecretAmount(id){
                             xhrr.send(JSON.stringify({ "message": JSON.parse(xmlhttp.responseText)[0], "noteHash": id, "from": fromAccount, "to": to, "label": label}));
                         }
                     }
-                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.open('GET', `http://172.16.17.97:3001/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
                 }
         }

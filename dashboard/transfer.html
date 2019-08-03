@@ -83,12 +83,8 @@
 			                                          	<input id="accountAddress" type="text" class="form-control">
 			                                        </div>
 												</div>
-
-												
-
 		                                	</div>
 		                                	<div class="col-sm-6">
-		                                    	
 												<div class="input-group">
 													<span class="input-group-addon">
 														<i class="material-icons">attach_money</i>
@@ -98,7 +94,12 @@
 			                                          	<input id="amount" type="text" class="form-control">
 			                                        </div>
 												</div>
-		                                	</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type='button' class='btn btn-fill btn-info btn-wd' onclick="sendTx()" name='next' value='Send' />
+												</div>
+											</div>
 		                            	</div>
 		                            </div>
 		                            <div class="tab-pane" id="description">
@@ -106,10 +107,24 @@
 		                                    <h4 class="info-text"> Change Configurations Here</h4>
 		                                    <div class="col-sm-6 col-sm-offset-1">
 	                                    		<div class="form-group">
-		                                            <label>Private Key</label>
-													<input id="privateKey" type="text" class="form-control">
+		                                            <label>Actors</label>
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios" id="bob1">
+															BoB1
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" name="optionsRadios" checked="true" id="bob2">
+															BoB2
+														</label>
+													</div>
+													<input type='button' class='btn btn-fill btn-info btn-wd' onclick="invoke()" name='next' value='Invoke' />
+													<input type='button' class='btn btn-fill btn-info btn-wd' onclick="revoke()" name='next' value='Revoke' />
 		                                        </div>
-		                                    </div>
+											</div>
+											
 		                                    <!-- <div class="col-sm-4">
 		                                    	<div class="form-group">
 		                                            <label class="control-label">Example</label>
@@ -119,7 +134,6 @@
 										</div>
 									</div>
 									<div class="pull-right">
-	                                    <input type='button' class='btn btn-fill btn-info btn-wd' onclick="sendTx()" name='next' value='Send' />
 	                                    <!-- <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Set' /> -->
 	                                </div>
 		                        </div>
