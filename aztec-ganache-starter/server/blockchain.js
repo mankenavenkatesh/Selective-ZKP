@@ -87,7 +87,7 @@ const { JoinSplitProof, MintProof } = aztec;
     );
 
     console.log((await aztec.note.fromViewKey(sallyTaxiFee.getView())).k.toNumber());
-    return sallyTaxiFee.getView();
+    return [sallyTaxiFee.getView(), sallyTaxiFee.noteHash,bob, sally];
 
 };
 
