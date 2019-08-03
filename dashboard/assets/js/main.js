@@ -7,7 +7,7 @@ function sendTx(){
     amount = document.getElementById('amount').value;
     //call API with accountAddress and Amount
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-    var theUrl = "http://172.16.17.97:3000/sendConfidentialTransaction";
+    var theUrl = "http://172.16.17.16:3000/sendConfidentialTransaction";
     xmlhttp.open("POST", theUrl);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.onload = function (){
@@ -17,3 +17,5 @@ function sendTx(){
     }
     xmlhttp.send(JSON.stringify({ "receiver": "0x87897m", "value": amount }));
 }
+
+
