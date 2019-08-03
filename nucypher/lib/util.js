@@ -1,5 +1,7 @@
 const http = require('axios');
 const config = require("../config.json");
+const cors = require('cors');
+
 
 const grantAccess = (bob_encrypting_key, bob_verifying_key, policyName, m, n, expiry) => {
     return http.put(`${config.ALICE_URL}/grant`, {

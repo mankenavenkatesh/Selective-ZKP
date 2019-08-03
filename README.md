@@ -2,3 +2,5 @@
 
 ## Team - nuAztec
 
+## Flow
+![Flow](Flow.png)

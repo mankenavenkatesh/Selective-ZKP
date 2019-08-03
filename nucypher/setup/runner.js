@@ -80,7 +80,7 @@ const runner = async (noOfBob) => {
 
     const policyEncryptingKey = await createPolicy(`http://localhost:${alicePortIndex}`, policyName);
     console.log("Policy Encrypting Key : ", policyEncryptingKey);
-    // startEnrico(enricoPortIndex, policyEncryptingKey);
+    startEnrico(enricoPortIndex, policyEncryptingKey);
 };
 
 runner(2);
