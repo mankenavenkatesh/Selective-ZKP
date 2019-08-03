@@ -29,7 +29,15 @@ function viewSecretAmount(id){
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.onload = function (){
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                alert("Confidential Transaction Executed");
+                var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            document.getElementById(id).innerHTML = xhr.responseText;
+                        }
+                    }
+                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.send(null);
+                }
             }
         }
         xmlhttp.send(JSON.stringify({ "bobIndex": "1", "policyName":"ceo", "encViewKey": encMsg}));
@@ -40,7 +48,15 @@ function viewSecretAmount(id){
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.onload = function (){
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                alert(body);
+                var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            document.getElementById(id).innerHTML = xhr.responseText;
+                        }
+                    }
+                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.send(null);
+                }
             }
         }
         xmlhttp.send(JSON.stringify({ "bobIndex": "2", "policyName":"hr", "encViewKey": encMsg}));
@@ -51,7 +67,15 @@ function viewSecretAmount(id){
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.onload = function (){
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                alert(body);
+                var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            document.getElementById(id).innerHTML = xhr.responseText;
+                        }
+                    }
+                    xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
+                    xhr.send(null);
+                }
             }
         }
         xmlhttp.send(JSON.stringify({ "bobIndex": "3", "policyName":"emp", "encViewKey": encMsg}));
