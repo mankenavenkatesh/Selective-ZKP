@@ -4,7 +4,9 @@
 
 #### But We Selective-ZKP enhances Aztec Protocol helping users to provide view access to SELECTIVE clients.
 
-## How do we do this???
+### Why do we need this???
+
+### How do we do this???
 
 
 
