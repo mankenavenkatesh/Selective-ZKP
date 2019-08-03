@@ -11,6 +11,7 @@ In case of confidential transactions, the transaction value is visible only to p
 There are numerous use cases like mentioned above where confidentiality is required with Selective Access Control [RBAC] which is not possible with currect confidential solutions.
 
 ![Team - nuAztec](logo.png)
+<img align="right" width="100" height="100" src="logo.png">
 
 ## Solution
 Selective-ZKP is a Decentralized platform for Role based access view of Confidential Assets created using Zero Knowledge Proofs. These Confidential Assets are created and transfered using Aztec Protocol. Confidential Assets are transfered as Notes[Similar to UTXO Model] in Aztec Protocol. Participants uses Viewing Key to fetch the transaction Value of Note. Viewing Key is shared only with the Participants of Transaction in Aztec Protocol.
