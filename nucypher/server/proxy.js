@@ -25,9 +25,12 @@
 var express        =         require("express");
 var bodyParser     =         require("body-parser");
 var app            =         express();
-var cors = require('cors')
-const http = require("axios");
+var cors = require('cors');
 var request = require('request');
+const util = require('../lib/util');
+
+const ALICE_VERIFYING_KEY = "031b0f3a4ef7e7f9f4f9f706aa036bb6c0f63716a5e1688cc4c6d7c834ba55d596";
+const POLICY_ENCRYPTING_KEY = "02701a3e23a45dc6427f422a942cb7a09200b22860cc46249f868ca4df65040bfe";
 
 var admin = require("firebase-admin");
 
@@ -38,8 +41,9 @@ admin.initializeApp({
   databaseURL: "https://selective-zkp.firebaseio.com"
 });
 
-  var db = admin.database();
-  var ref = db.ref();
+var db = admin.database();
+var ref = db.ref();
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -68,6 +72,15 @@ app.post('/reqEnc',async function(req,res){
             to
         });
     });
+});
+
+app.post('/retrieve', async function(req, res) {
+    const bobIndex = req.body.bobIndex;
+    const policyName = req.body.policyName;
+    const encViewKey = req.body.encViewKey;
+
+    const msg = await util.retreiveMessage(parseInt(bobIndex), ALICE_VERIFYING_KEY, POLICY_ENCRYPTING_KEY, policyName, encViewKey);
+    res.send(msg.result.cleartexts);
 });
 
 app.listen(5500,function(){

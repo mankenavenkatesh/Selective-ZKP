@@ -2,7 +2,7 @@ const { exec } = require("child_process");
 const http = require('axios');
 
 const URSULA_URL = "localhost:10151";
-const policyName = "testing";
+const policyName = "admin";
 let alicePortIndex = 3000;
 let bobPortIndex = 4000;
 let enricoPortIndex = 5000;

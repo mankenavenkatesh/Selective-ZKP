@@ -31,7 +31,8 @@ const encryptMessage = (msg) => {
 }
 
 const retreiveMessage = (bobIndex, alice_verifying_key, policy_encrypting_key, policyName, encryptedMsg) => {
-    return http.post(`${config.BOB_URL}:${4000+bobIndex}/retrieve`, {
+    console.log(bobIndex, alice_verifying_key, policy_encrypting_key, policyName, encryptedMsg);
+    return http.post(`${config.BOB_IP}:${4000+bobIndex}/retrieve`, {
         policy_encrypting_key,
         alice_verifying_key,
         label: policyName,
