@@ -1,8 +1,8 @@
 
-![Team - nuAztec](logo.png)
+
 # Selective-ZKP EthIndia2k19
 
-## Problem Statement
+## Problem Statement        
 In case of confidential transactions, the transaction value is visible only to participants of the transaction. 
 1. What IF in an organization with various levels like CEO, VP, HR, Employees want to use confidential transactions with provision for selective view access to a group of people?
 2. What IF in a closed auction using confidential transactions, once auction period is completed, the auction value must be revealed to a group of people?
@@ -10,7 +10,7 @@ In case of confidential transactions, the transaction value is visible only to p
 
 There are numerous use cases like mentioned above where confidentiality is required with Selective Access Control [RBAC] which is not possible with currect confidential solutions.
 
-
+                            ![Team - nuAztec](logo.png)
 ## Solution
 Selective-ZKP is a Decentralized platform for Role based access view of Confidential Assets created using Zero Knowledge Proofs. These Confidential Assets are created and transfered using Aztec Protocol. Confidential Assets are transfered as Notes[Similar to UTXO Model] in Aztec Protocol. Participants uses Viewing Key to fetch the transaction Value of Note. Viewing Key is shared only with the Participants of Transaction in Aztec Protocol.
 
