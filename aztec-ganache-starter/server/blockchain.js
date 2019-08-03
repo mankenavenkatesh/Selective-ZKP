@@ -10,7 +10,8 @@ const secp256k1 = require('@aztec/secp256k1');
 
 // const PrivateVenmo = artifacts.require('./PrivateVenmo.sol');
 // const ZkAssetMintable = artifacts.require('./ZkAssetMintable.sol');
-var ZkAssetMintable = Contract(require('/Users/venkateshmankena/Documents/MyGithub/Selective-ZKP/aztec-ganache-starter/build/contracts/ZkAssetMintable.json'));
+var ZkAssetMintable = Contract(require('../build/contracts/ZkAssetMintable.json'));
+// const ZkAssetMintable = Contract(require('@aztec/protocol/contracts/ERC1724/ZkAsset.sol'))
 ZkAssetMintable.setProvider(provider);
 // const JoinSplit = artifacts.require('@aztec/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol');
 

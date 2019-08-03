@@ -28,9 +28,20 @@ var app            =         express();
 var cors = require('cors');
 var request = require('request');
 const util = require('../lib/util');
+const ports = require('../ports.json');
 
-const ALICE_VERIFYING_KEY = "025b24a74df391544eafd4a5fab0474dd4e77eb378cb3a8541e106e07114dfd17b";
-const POLICY_ENCRYPTING_KEY = "022826b0ed39ebfcbc4759624f2959979dfc3c7affd4d2ed89d3f1535c844030b0";
+// const ALICE_VERIFYING_KEY = "03bc0b374036e0e08c6bef51a195eb2e6f5b267e85b0e090af3022ed2a2ba4ebeb";
+// const POLICY_ENCRYPTING_KEY = "03f451f5a4312b0b9978760a5b3bbac0691c3e2fa3d854234a75e36dccf525f99d";
+// const BOB_VERIFYING_KEYS = ["02eff5e5351370f84d421fb4904e59f16852fb4bf9f5f6b62424f091633fdba438", "03efd672f5e865c41cf3e4ca46e0b184ca143b2f472c3e976609317c0262964fb7"];
+// const BOB_ENCRYPTING_KEYS = ["03bd0fbd36c6b0b593faef04f92c8e69798e3a64c1de18520908cba6fad7a860b8", "02e2c5913afc88cc7b35cd6e9d6f864f231f4bd4f9d5286145c280780d2f2fcf3d"]
+const ALICE_VERIFYING_KEY = ports["Alice"][0].verification_key;
+const POLICY_ENCRYPTING_KEY = ports.policy_encrypting_key;
+const BOB_VERIFYING_KEYS = [], BOB_ENCRYPTING_KEYS = [];
+
+for(let i in ports["Bob"]) {
+    BOB_ENCRYPTING_KEYS.push(ports["Bob"][i].encryption_key)
+    BOB_VERIFYING_KEYS.push(ports["Bob"][i].verification_key)
+}
 
 var admin = require("firebase-admin");
 
@@ -94,6 +105,31 @@ app.post('/retrieve', async function(req, res) {
 
     const msg = await util.retreiveMessage(parseInt(bobIndex), ALICE_VERIFYING_KEY, POLICY_ENCRYPTING_KEY, policyName, encViewKey);
     res.send(msg.result.cleartexts);
+});
+
+app.post('/grant', async (req, res) => {
+    // bob_encrypting_key, bob_verifying_key, policyName, m, n, expiry
+    const bobIndex = req.body.bobIndex;
+    const bob_encrypting_key = BOB_ENCRYPTING_KEYS[bobIndex];
+    const policyName = req.body.policyName;
+    // TODO - as this is a dev network, we only have one ursula
+    const m = 1, n = 1;
+    // TODO - to be sent by granter
+    const expiry = "2020-09-15T15:20:00";
+
+    const msg = await util.grantAccess(bob_encrypting_key, BOB_VERIFYING_KEYS[bobIndex], policyName, m, n, expiry);
+    console.log(msg);
+    res.send(true);
+});
+
+app.post('/revoke', async (req, res) => {
+  console.log(req.body)
+    const bobIndex = req.body.bobIndex;
+    const policyName = req.body.policyName;
+
+    const msg = await util.revokeAccess(BOB_VERIFYING_KEYS[bobIndex], policyName);
+    console.log(msg);
+    res.send(msg.result);
 });
 
 app.listen(5500,function(){

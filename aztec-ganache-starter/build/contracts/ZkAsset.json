@@ -1303,10 +1303,168 @@
       "links": {},
       "address": "0xea292dfF009d9113B66FAc35DA907dF1b12AE18d",
       "transactionHash": "0x495768a94b9e5cfc39980d11bb3a06e9950822df4692d4d4c825bb6c14f585d9"
+    },
+    "1564846430314": {
+      "events": {
+        "0xca576e79bcb5c4a0045d9d596a80c733c3997559f688f69e5c03bd737d885b86": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "aceAddress",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "linkedTokenAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "scalingFactor",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "_canAdjustSupply",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "_canConvert",
+              "type": "bool"
+            }
+          ],
+          "name": "CreateZkAsset",
+          "type": "event",
+          "signature": "0xca576e79bcb5c4a0045d9d596a80c733c3997559f688f69e5c03bd737d885b86"
+        },
+        "0x0b328bb83ddd8094b92e850e4a6a7e25d474ef81760d423ca6c5bac4f75ac5f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "noteRegistryId",
+              "type": "uint256"
+            }
+          ],
+          "name": "CreateNoteRegistry",
+          "type": "event",
+          "signature": "0x0b328bb83ddd8094b92e850e4a6a7e25d474ef81760d423ca6c5bac4f75ac5f2"
+        },
+        "0x5ffb3072e4515cf3bfae8b16be9dff6313cf7c313a0c26faafe6971d8c7585f1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "metadata",
+              "type": "bytes"
+            }
+          ],
+          "name": "CreateNote",
+          "type": "event",
+          "signature": "0x5ffb3072e4515cf3bfae8b16be9dff6313cf7c313a0c26faafe6971d8c7585f1"
+        },
+        "0xebd4bb7b61198df63305dd538f077db9df9b14339d8a6221e301487770d79227": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "metadata",
+              "type": "bytes"
+            }
+          ],
+          "name": "DestroyNote",
+          "type": "event",
+          "signature": "0xebd4bb7b61198df63305dd538f077db9df9b14339d8a6221e301487770d79227"
+        },
+        "0xfed3b27b73d78d9d1f344bbbf25f7af35e0ac4d6cf8193604ce18082168e461a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "ConvertTokens",
+          "type": "event",
+          "signature": "0xfed3b27b73d78d9d1f344bbbf25f7af35e0ac4d6cf8193604ce18082168e461a"
+        },
+        "0x60213c45c34d8b94e495fd5871fdea7a7511f659e884ea25a0c8843b7f98bfad": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "RedeemTokens",
+          "type": "event",
+          "signature": "0x60213c45c34d8b94e495fd5871fdea7a7511f659e884ea25a0c8843b7f98bfad"
+        },
+        "0x5c5b88831bccbd4efdc04b97a0bcb2a743b216c3cc74b4520ca833778ec87dfb": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "noteHash",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "metadata",
+              "type": "bytes"
+            }
+          ],
+          "name": "UpdateNoteMetadata",
+          "type": "event",
+          "signature": "0x5c5b88831bccbd4efdc04b97a0bcb2a743b216c3cc74b4520ca833778ec87dfb"
+        }
+      },
+      "links": {},
+      "address": "0x62d6a2A0595b6E7c682a654c1119Fe1aB61d75f5",
+      "transactionHash": "0x2e35ccccbd851f944fd5b2a7abde2501a8263d4f3650ed4484c08e3df4767dd8"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-03T01:42:05.251Z",
+  "updatedAt": "2019-08-03T19:59:37.096Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "A contract defining the standard interface and behaviours of a confidential asset. The ownership values and transfer values are encrypted. Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",

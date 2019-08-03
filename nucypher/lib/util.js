@@ -1,9 +1,11 @@
 const http = require('axios');
+const request = require("request");
 const config = require("../config.json");
 const cors = require('cors');
 
 
 const grantAccess = (bob_encrypting_key, bob_verifying_key, policyName, m, n, expiry) => {
+    console.log(bob_encrypting_key, bob_verifying_key, policyName, m, n, expiry);
     return http.put(`${config.ALICE_URL}/grant`, {
         bob_encrypting_key,
         label: policyName,
@@ -43,11 +45,20 @@ const retreiveMessage = (bobIndex, alice_verifying_key, policy_encrypting_key, p
 }
 
 const revokeAccess = (bob_verifying_key, policyName) => {
-    return http.post(`${config.ALICE_URL}/revoke`, {
-        bob_verifying_key,
-        label: policyName
+    return http.delete(`${config.ALICE_URL}/revoke`, {
+        data: JSON.stringify({
+            bob_verifying_key,
+            label: policyName
+        }),
+        headers: {
+            "Content-Type": "application/json"
+        }
     }).then((response) => {
-        return response.data;
+        if(!response.data.result.failed_revocations) {
+            return true;
+        } else {
+            return false;
+        }
     });
 }
 

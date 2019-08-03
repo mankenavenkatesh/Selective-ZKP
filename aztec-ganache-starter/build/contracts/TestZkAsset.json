@@ -395,9 +395,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >= 0.5.0 <0.7.0;\n\n\nimport \"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\";\nimport \"@aztec/protocol/contracts/ERC1724/ZkAssetMintable.sol\";\nimport \"@aztec/protocol/contracts/ERC1724/ZkAsset.sol\";\n\n\ncontract TestERC20 is ERC20 {\n  function giveMeTokens(address _account, uint256 _value) public {\n    _mint(_account, _value);\n  }\n}\n\ncontract TestZkAssetMintable is ZkAssetMintable {\n\n}\n\ncontract TestZkAsset is ZkAsset {\n\n}\n",
-  "sourcePath": "/Users/venkateshmankena/Documents/MyGithub/Selective-ZKP/aztec-ganache-starter/contracts/TestERC20.sol",
+  "sourcePath": "/Users/prateekyammanuru/work/hackathons/ethIndia2019/Selective-ZKP/aztec-ganache-starter/contracts/TestERC20.sol",
   "ast": {
-    "absolutePath": "/Users/venkateshmankena/Documents/MyGithub/Selective-ZKP/aztec-ganache-starter/contracts/TestERC20.sol",
+    "absolutePath": "/Users/prateekyammanuru/work/hackathons/ethIndia2019/Selective-ZKP/aztec-ganache-starter/contracts/TestERC20.sol",
     "exportedSymbols": {
       "TestERC20": [
         88
@@ -760,7 +760,7 @@
     "src": "0:445:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/venkateshmankena/Documents/MyGithub/Selective-ZKP/aztec-ganache-starter/contracts/TestERC20.sol",
+    "absolutePath": "/Users/prateekyammanuru/work/hackathons/ethIndia2019/Selective-ZKP/aztec-ganache-starter/contracts/TestERC20.sol",
     "exportedSymbols": {
       "TestERC20": [
         88
@@ -1128,7 +1128,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-03T01:41:57.112Z",
+  "updatedAt": "2019-08-03T19:59:25.832Z",
   "devdoc": {
     "methods": {
       "confidentialApprove(bytes32,address,bool,bytes)": {

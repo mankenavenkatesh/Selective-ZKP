@@ -23380,10 +23380,127 @@
       "links": {},
       "address": "0x8b9dc54F92Af90E09FB235e4E61d5e3ee9e84b51",
       "transactionHash": "0x18eb3b34fca86388b16c9e297913192eb40c1fcf3d405604d7a42eba15444dc1"
+    },
+    "1564846430314": {
+      "events": {
+        "0x85adab12e45179738a96f914df934f3d0b656588ea13f75093bd4796dc3e2736": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_commonReferenceString",
+              "type": "bytes32[6]"
+            }
+          ],
+          "name": "SetCommonReferenceString",
+          "type": "event",
+          "signature": "0x85adab12e45179738a96f914df934f3d0b656588ea13f75093bd4796dc3e2736"
+        },
+        "0x056d19b176848b2ba83ba7d1d83c9022e6c1bd37d5c648a143ccec369e53f3c9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "epoch",
+              "type": "uint8"
+            },
+            {
+              "indexed": true,
+              "name": "category",
+              "type": "uint8"
+            },
+            {
+              "indexed": true,
+              "name": "id",
+              "type": "uint8"
+            },
+            {
+              "indexed": false,
+              "name": "validatorAddress",
+              "type": "address"
+            }
+          ],
+          "name": "SetProof",
+          "type": "event",
+          "signature": "0x056d19b176848b2ba83ba7d1d83c9022e6c1bd37d5c648a143ccec369e53f3c9"
+        },
+        "0x9a76c82938224c049c704b5f4bfdbe9ef61749be7b65291103b97274b874665d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newLatestEpoch",
+              "type": "uint8"
+            }
+          ],
+          "name": "IncrementLatestEpoch",
+          "type": "event",
+          "signature": "0x9a76c82938224c049c704b5f4bfdbe9ef61749be7b65291103b97274b874665d"
+        },
+        "0x34fbbb932061028a5177da0c6ca6a7359202a390c458f2c2c042ca3e4357d53e": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "registryOwner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "registryAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "scalingFactor",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "linkedTokenAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "canAdjustSupply",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "canConvert",
+              "type": "bool"
+            }
+          ],
+          "name": "CreateNoteRegistry",
+          "type": "event",
+          "signature": "0x34fbbb932061028a5177da0c6ca6a7359202a390c458f2c2c042ca3e4357d53e"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        }
+      },
+      "links": {},
+      "address": "0x0507D3Ac516B49FC2418fBc248c053Fc39844b23",
+      "transactionHash": "0xef55aca8bf66cf5782d6f2df2586ecea76a9e2b36ce3f97ca96579c26333bb46"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-03T01:42:05.242Z",
+  "updatedAt": "2019-08-03T19:59:37.083Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "ACE validates the AZTEC protocol's family of zero-knowledge proofs, which enables     digital asset builders to construct fungible confidential digital assets according to the AZTEC token standard. Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",
