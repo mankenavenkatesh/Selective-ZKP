@@ -3,11 +3,11 @@
 
 ## Problem Statement
 In case of confidential transactions, the transaction value is visible only to participants of the transaction. 
-1. What IF in an organization with various levels like CEO, VP, HR, Employees want to use confidential transactions with providing selective view access to a group of people?
+1. What IF in an organization with various levels like CEO, VP, HR, Employees want to use confidential transactions with provision for selective view access to a group of people?
 2. What IF in a closed auction using confidential transactions, once auction period is completed, the auction value must be revealed to a group of people?
 3. What if Governments needs view access for Incometax returns calculation purpose of Crypto confidential transactions? ETC
 
-There are numerous use cases like mentioned above where confidentiality is required with Selective Access Control [RBAC] which is nop possible with currect confidential solutions.
+There are numerous use cases like mentioned above where confidentiality is required with Selective Access Control [RBAC] which is not possible with currect confidential solutions.
 
 
 ## Solution
