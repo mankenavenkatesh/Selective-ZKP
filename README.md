@@ -1,4 +1,5 @@
-## Team - nuAztec
+
+![Team - nuAztec](logo.png)
 # Selective-ZKP EthIndia2k19
 
 ## Problem Statement
