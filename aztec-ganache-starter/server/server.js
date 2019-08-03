@@ -2,7 +2,9 @@ var express        =         require("express");
 var bodyParser     =         require("body-parser");
 var app            =         express();
 var sendConfidentialTransaction = require('./blockchain.js');
+var cors = require('cors')
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

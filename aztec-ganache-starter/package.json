@@ -9,6 +9,7 @@
     "@aztec/protocol": "0.9.0",
     "@aztec/secp256k1": "1.0.1",
     "aztec.js": "0.11.0",
+    "cors": "^2.8.5",
     "openzeppelin-solidity": "^2.2.0",
     "truffle-contract": "^4.0.27",
     "web3": "^1.0.0-beta.51"
