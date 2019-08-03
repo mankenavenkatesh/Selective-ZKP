@@ -3,8 +3,9 @@
 
 ## Problem Statement
 In case of confidential transactions, the transaction value is visible only to participants of the transaction. 
-1. What if in an organization with various roles like CEO, 
-2. What if Governments needs view access for Incometax returns calculation purpose ??
+1. What IF in an organization with various levels like CEO, VP, HR, Employees want to use confidential transactions by groups?
+2. What IF in a closed auction using confidential transactions, after auction period, the auction value 
+3. What if Governments needs view access for Incometax returns calculation purpose?
 2. 
 
 
