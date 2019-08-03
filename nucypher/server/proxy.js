@@ -57,6 +57,7 @@ app.post('/reqEnc',async function(req,res){
   const noteHash = req.body.noteHash;
   const from = req.body.from;
   const to = req.body.to;
+  const label = req.body.label;
   request.post({
     headers: request.headers,
     url:     'http://localhost:5000/encrypt_message',
@@ -64,13 +65,25 @@ app.post('/reqEnc',async function(req,res){
     json: true
   }, function(error, response, body){
         res.send(body.result.message_kit);
-        var usersRef = ref.child("notes");
-        usersRef.push({
+        console.log(label);
+        if(label){
+          var usersRef = ref.child(`notes/${label}`);
+        usersRef.set({
             noteHash: noteHash,
             encMsg: body.result.message_kit,
             from,
             to
         });
+        }else{
+          var usersRef = ref.child("notes");
+          usersRef.push({
+              noteHash: noteHash,
+              encMsg: body.result.message_kit,
+              from,
+              to
+          });
+        }
+        
     });
 });
 

@@ -5,6 +5,7 @@ let to = "0xdf87dsds8f78adf78789";
 let value = 0;
 let user = "admin";
 let encMsg;
+let label;
 window.addEventListener('load', fetchNotes);
 
 var firebaseConfig = {
@@ -37,7 +38,6 @@ function viewSecretAmount(id){
                     }
                     xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
-                }
             }
         }
         xmlhttp.send(JSON.stringify({ "bobIndex": "1", "policyName":"ceo", "encViewKey": encMsg}));
@@ -56,7 +56,6 @@ function viewSecretAmount(id){
                     }
                     xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
-                }
             }
         }
         xmlhttp.send(JSON.stringify({ "bobIndex": "2", "policyName":"hr", "encViewKey": encMsg}));
@@ -75,7 +74,6 @@ function viewSecretAmount(id){
                     }
                     xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
                     xhr.send(null);
-                }
             }
         }
         xmlhttp.send(JSON.stringify({ "bobIndex": "3", "policyName":"emp", "encViewKey": encMsg}));
@@ -90,6 +88,17 @@ function viewSecretAmount(id){
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState == XMLHttpRequest.DONE) {
                             document.getElementById(id).innerHTML = xhr.responseText;
+                            var xhrr = new XMLHttpRequest();
+                            var reProxyUrl ="http://172.16.17.97:5500/reqEnc";
+                            xhrr.open("POST", reProxyUrl);
+                            xhrr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                            xhrr.onload = function(){
+                                if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                                    console.log(xhrr.responseText);
+                                }
+                            }
+                            // console.log(label);
+                            xhrr.send(JSON.stringify({ "message": JSON.parse(xmlhttp.responseText)[0], "noteHash": id, "from": fromAccount, "to": to, "label": label}));
                         }
                     }
                     xhr.open('GET', `http://172.16.17.16:3000/getValFromViewingKey?viewingKey=${JSON.parse(xmlhttp.responseText)[0]}`, true);
@@ -101,10 +110,14 @@ function viewSecretAmount(id){
 }
 
 function fetchNotes(){
+    i = 0;
     var starCountRef = firebase.database().ref('notes/');
     starCountRef.on('value', function(snapshot) {
         snapshot.forEach(snappy => {
             encMsg = snappy.val().encMsg;
+            fromAccount = snappy.val().from;
+            to = snappy.val().to;
+            label = Object.keys(snapshot.val())[i++];
             document.getElementById('cardsHere').innerHTML += `<div class="card" style="background-color: #f5f5f5;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s; margin-bottom: 20px;">
         <div class="container">
