@@ -12,7 +12,7 @@ Confidential transactions allow only the parties partaking in a transaction to b
 There are numerous use cases like mentioned above where confidentiality is required with Selective Access Control [RBAC] which is not possible with currect confidential solutions.
 
 <p align="center">
-  <img src="logo.png">
+  <img src="nuAztec.png">
 </p>
 
 ## Solution
