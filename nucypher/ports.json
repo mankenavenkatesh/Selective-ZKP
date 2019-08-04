@@ -1,19 +1,19 @@
 {
   "Alice": {
     "0": {
-      "verification_key": "0360ef8c364a69b6c433f9f0bc433ed371e7047fe89c0e7e496ee300a5c7464447"
+      "verification_key": "03469cd2d09845acecd4ff75a45d35cf04c885c662e87748f973cb549c0d83ce35"
     }
   },
   "Bob": {
     "0": {
-      "verification_key": "02fb13f349974856c8392d8c6382faadea5060f83ec1198c50753e1d81838143b0",
-      "encryption_key": "03e775bd8f51a807abc31395ae6bda5723452daf041604250db7804ca58c7ee053"
+      "verification_key": "02db167b130a5bb2eb313959c4c71a69ce81d0d56fc18a811daec74fd0763f83a0",
+      "encryption_key": "023d005c1923820d3a286b25935377be9190c00021d71655104e6e66e0b7012a99"
     },
     "1": {
-      "verification_key": "03295e4e153a374894c4e6ac7aa72105c891fd815749af1c704ebea7ab26de2467",
-      "encryption_key": "02e009aedd18a386a8383d69272420b4407d520ae978dfe4162ebf15cc468ea62e"
+      "verification_key": "03615dadb8afbcf984548b4f1c4703345a6a128751eb23a50be387f1f27d013485",
+      "encryption_key": "02cccbfffadf3c3ec55e25515f9b1a9e619f924807dfa311cc06ee8ccceb1c378f"
     }
   },
   "Enrico": {},
-  "policy_encrypting_key": "03d4f7c85b05ea2263493a9d8639dd761484ef316ef844f9484cb3dafd4256a7ad"
+  "policy_encrypting_key": "035831973a9d23ed58d847c3e97b62522ae28632455c85a2689350a147ab463e39"
 }

@@ -514,10 +514,16 @@
       "links": {},
       "address": "0x95817e88Ce86beFF85af9E8e0bD6947E21cA7Df5",
       "transactionHash": "0xff839b5ea4dbe8eefe86927a4ee4628ed1f20404d960da270eb88fe3d17d68aa"
+    },
+    "1564884565031": {
+      "events": {},
+      "links": {},
+      "address": "0xC0dEE32F2229Cd5E592B0FE8677b178A7e1bee64",
+      "transactionHash": "0xb905db0ab375de8e90038a56c32ff46645195fbce614227c5f6186503d7dd5ef"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-03T19:59:36.030Z",
+  "updatedAt": "2019-08-04T02:12:31.034Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles) Copyright Spilsbury Holdings Ltd 2019. All rights reserved.*",

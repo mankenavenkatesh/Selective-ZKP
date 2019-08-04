@@ -120,3 +120,21 @@ const runner = async (noOfBob) => {
 
 runner(2);
 // createPolicy(`http://localhost:${alicePortIndex}`, policyName);
+
+// const importOrg = (orgFile) => {
+//     resolveOrgLayer(orgFile);
+// }
+
+// const resolveOrgLayer = async (remainingOrg) => {
+//     if(remainingOrg.length == 0) {
+//         return;
+//     }
+
+//     await createPolicy(`http://localhost:${alicePortIndex}`, remainingOrg[0].roleCode);
+
+//     for(let i = 0; i < remainingOrg.length; i++) {
+        
+//     }
+// }
+
+// importOrg(JSON.parse(require("../org.json")));

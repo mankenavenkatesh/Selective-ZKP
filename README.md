@@ -26,3 +26,13 @@ We Selective-ZKP enhances Aztec Protocol helping users to provide view access to
 
 ## Flow
 ![Flow](Flow.png)
+
+## How to run ?
+
+1. Start the ganache cli on port 8545 by going into the `aztec_ganache_starter` folder, then run `npm install` to install dependencies and run `yarn start`
+2. Open a new terminal and in the same folder run `yarn migrate`
+3. Go to the `nucypher/setup` folder, install dependencies using `npm install` and run `node runner.js` which will start the nucypher entities
+4. Then move to `nucypher/server` folder, install dependencies using `npm install` and run `node proxy.js` to connect to the nucypher entities
+5. Now go to `aztec_ganache_starter` folder and run `node server/server.js`
+6. Now run the UI server by going to `dashboard` folder, then installing live-server using `npm i -g live-server` and then running `live-server`.
+7. You will find 2 pages `transfer` and `reg` when you go to `http://127.-0.0.1:8080`

@@ -1078,10 +1078,16 @@
       "links": {},
       "address": "0x970279C06503E9BaDAa1DaBF51262C501BdeB454",
       "transactionHash": "0xcf5035a6bf384ead6cd45e45891310114e520ff2e2c7b304f2196c4f6b06e8b1"
+    },
+    "1564884565031": {
+      "events": {},
+      "links": {},
+      "address": "0xad735472FaA912Fe4395FC0ACEB906e74f5eF1CF",
+      "transactionHash": "0xed5ec6c2a4403f94b92037b6f9f91dfd662f4082ef7a2b4fa405a56bbb62baa2"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-03T19:59:37.103Z",
+  "updatedAt": "2019-08-04T02:12:31.636Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
