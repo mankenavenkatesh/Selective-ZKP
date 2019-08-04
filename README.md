@@ -1,6 +1,6 @@
 
 
-# Selective-ZKP EthIndia2k19
+# Selective-ZKP EthIndia2k19 (Team nuAztec)
 
 ## Problem Statement        
 In case of confidential transactions, the transaction value is visible only to participants of the transaction. 
