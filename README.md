@@ -30,6 +30,10 @@ We Selective-ZKP enhances Aztec Protocol helping users to provide view access to
 
 ## Video Link
 Vimeo: https://vimeo.com/351847897
+
+## Devfolio
+Submission https://devfolio.co/submissions/nuaztec-selective-zkp
+
 ## How to run ?
 
 1. Start the ganache cli on port 8545 by going into the `aztec_ganache_starter` folder, then run `npm install` to install dependencies and run `yarn start`
