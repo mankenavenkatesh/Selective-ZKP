@@ -3,7 +3,8 @@
 # Selective-ZKP EthIndia2k19 (Team nuAztec)
 
 ## Problem Statement        
-In case of confidential transactions, the transaction value is visible only to participants of the transaction. 
+Confidential transactions allow only the parties partaking in a transaction to be privy to the amount being transacted, outside observers are prevented from knowing this information.
+
 1. What IF in an organization with various levels like CEO, VP, HR, Employees want to use confidential transactions with provision for selective view access to a group of people?
 2. What IF in a closed auction using confidential transactions, once auction period is completed, the auction value must be revealed to a group of people?
 3. What if Governments needs view access for Incometax returns calculation purpose of Crypto confidential transactions? ETC
