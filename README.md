@@ -29,7 +29,7 @@ We Selective-ZKP enhances Aztec Protocol helping users to provide view access to
 ![Flow](Flow.png)
 
 
-## Video Link
+## Demo Video 
 Vimeo: https://vimeo.com/351847897
 
 ## Devfolio
